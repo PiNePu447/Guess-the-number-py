@@ -26,7 +26,7 @@ trys = 1
 
 answer = None
 
-while trys < 5 and answer != picked:
+while trys <= 5 and answer != picked:
     answer = int(input("Coloque um numerdo de 1-100:\n-"))
 
     if answer == picked:
