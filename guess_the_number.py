@@ -16,26 +16,26 @@ def isDiv5(number):
     else:
         return False
     
-def maiorMenor(rhs, lhs):
+def greater(rhs, lhs):
     if rhs > lhs:
         print("é maior que isso")
     else:
         print("é menor que isso")
 
-tentativas = 1
+trys = 1
 
-resposta = None
+answer = None
 
-while tentativas < 5 and resposta != picked:
-    resposta = int(input())
+while trys < 5 and answer != picked:
+    answer = int(input("Coloque um numerdo de 1-100:\n-"))
 
-    if resposta == picked:
-        print("Acertou em", tentativas, "tentativas")
-    elif tentativas == 1:
+    if answer == picked:
+        print("Acertou em", trys, "tentativas")
+    elif trys == 1:
         'print("Par:", isEven(picked), "Div5:", isDiv5(picked))'
         print("Par:", picked % 2 == 0, "Div5:", picked%5==0)
-        maiorMenor(picked, resposta)
+        greater(picked, answer)
     else:
-        maiorMenor(picked, resposta)
+        greater(picked, answer)
 
-    tentativas += 1
+    trys += 1
