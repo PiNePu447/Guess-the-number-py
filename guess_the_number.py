@@ -1,8 +1,8 @@
 import random
 
-numbers = range(1, 100)
+lifes = 5
 
-picked = random.choice(numbers)
+picked = random.randrange(100)
 
 def isEven(number):
     if number % 2 == 0:
@@ -26,7 +26,7 @@ trys = 1
 
 answer = None
 
-while trys <= 5 and answer != picked:
+while trys <= lifes and answer != picked:
     answer = int(input("Coloque um numerdo de 1-100:\n-"))
 
     if answer == picked:
@@ -35,6 +35,8 @@ while trys <= 5 and answer != picked:
         'print("Par:", isEven(picked), "Div5:", isDiv5(picked))'
         print("Par:", isEven(picked), "Div5:", isDiv5(picked))
         greater(picked, answer)
+    elif trys == lifes and answer != picked:
+        print("Estourou o numero de tentativas, nao foi dessa vez\nO numero era:", picked)
     else:
         greater(picked, answer)
 
