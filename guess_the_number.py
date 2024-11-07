@@ -33,7 +33,7 @@ while trys < 5 and answer != picked:
         print("Acertou em", trys, "tentativas")
     elif trys == 1:
         'print("Par:", isEven(picked), "Div5:", isDiv5(picked))'
-        print("Par:", picked % 2 == 0, "Div5:", picked%5==0)
+        print("Par:", isEven(picked), "Div5:", isDiv5(picked))
         greater(picked, answer)
     else:
         greater(picked, answer)
